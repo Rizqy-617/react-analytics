@@ -2,11 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import {Button} from '@mui/joy';
 import analytics from './configuration';
-import { logEvent } from "firebase/analytics";
 import { useEffect } from 'react';
-import ReactGa from 'react-ga4'
 
-const payload = {"client_id":"GA1.1.1893775379.1730791804","non_personalized_ads":false,"events":[{"name":"new_event","params":{"items":[],"button_name":"testing"}}]}
+const payload = {"client_id":"GA1.1.1893775379.1730791804","non_personalized_ads":false,"events":[{"name":"testing_event_via_url","params":{"items":[],"button_name":"testing_lagi"}}]}
 const measurementId = "G-CYLMJ0XRLL";
 const apiSecret = "ZUZq21-cQ-GWbJ37ptrpSQ"
 
