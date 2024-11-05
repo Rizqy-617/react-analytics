@@ -4,12 +4,14 @@ import {Button} from '@mui/joy';
 import analytics from './configuration';
 import { logEvent } from "firebase/analytics";
 import { useEffect } from 'react';
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 
 
 function App() {
   useEffect(() => {
     console.log("ya hallo")
   }, [])
+  const gaEventTracker = useAnalyticsEventTracker('Testing reacts');
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +23,7 @@ function App() {
           () => {
             console.log("this happened");
             console.log(analytics.app.name);
+            gaEventTracker("this_happened");
             logEvent(
               analytics,
               "click_button",

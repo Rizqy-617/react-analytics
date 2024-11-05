@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import ReactGA from 'react-ga';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,8 +17,11 @@ const firebaseConfig = {
   measurementId: "G-F4LZ1R1KEK"
 };
 
+const TRACKING_ID = "G-F4LZ1R1KEK";
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const reaactGa = ReactGA.initialize(TRACKING_ID);
 
 export default analytics;
