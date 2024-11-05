@@ -23,7 +23,12 @@ function App() {
           () => {
             console.log("this happened");
             console.log(analytics.app.name);
-            
+            window.dataLayer.push({
+                userid: "008434",
+                booking: 'step 2',
+                event : 'RequestCallback'
+            });
+
             // fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`, {
             //   method: "POST",
             //   body: JSON.stringify(payload)
