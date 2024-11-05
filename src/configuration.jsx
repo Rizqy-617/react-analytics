@@ -17,7 +17,7 @@ const firebaseConfig = {
   measurementId: "G-F4LZ1R1KEK"
 };
 
-const TRACKING_ID = "G-CYLMJ0XRLL";
+const TRACKING_ID = "G-F4LZ1R1KEK";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
