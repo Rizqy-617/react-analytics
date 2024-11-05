@@ -19,16 +19,11 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Button onClick={
+        <Button id='test_react' className='test_react' onClick={
           () => {
             console.log("this happened");
             console.log(analytics.app.name);
-            if (typeof window.gtag == "function") {
-              window.gtag('event', 'screen_view', {
-                'app_name': 'myAppName',
-                'screen_name': 'Home'
-              });
-            }
+            
             // fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`, {
             //   method: "POST",
             //   body: JSON.stringify(payload)
