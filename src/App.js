@@ -4,7 +4,7 @@ import {Button} from '@mui/joy';
 import analytics from './configuration';
 import { logEvent } from "firebase/analytics";
 import { useEffect } from 'react';
-import useAnalyticsEventTracker from './useAnalyticsEventTracker';
+import useAnalyticsEventTracker from './analysticEventTracker';
 
 
 function App() {

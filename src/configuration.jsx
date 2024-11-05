@@ -22,6 +22,6 @@ const TRACKING_ID = "G-F4LZ1R1KEK";
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const reaactGa = ReactGA.initialize(TRACKING_ID);
+ReactGA.initialize(TRACKING_ID);
 
 export default analytics;
