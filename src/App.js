@@ -6,6 +6,9 @@ import { logEvent } from "firebase/analytics";
 import { useEffect } from 'react';
 import ReactGa from 'react-ga4'
 
+const payload = {"client_id":"GA1.1.1893775379.1730791804","non_personalized_ads":false,"events":[{"name":"new_event","params":{"items":[],"button_name":"testing"}}]}
+const measurementId = "G-CYLMJ0XRLL";
+const apiSecret = "ZUZq21-cQ-GWbJ37ptrpSQ"
 
 function App() {
   useEffect(() => {
@@ -22,17 +25,20 @@ function App() {
           () => {
             console.log("this happened");
             console.log(analytics.app.name);
-            ReactGa.event({
-              "action": "click_button",
-              "category": "click_button"
+            fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`, {
+              method: "POST",
+              body: JSON.stringify(payload)
+            }).then(response => response.json())
+            .then(data => {
+              console.log(data)
             })
-            logEvent(
-              analytics,
-              "click_button",
-              {
-                button_name: "react_button"
-              }
-            )
+            // logEvent(
+            //   analytics,
+            //   "click_button",
+            //   {
+            //     button_name: "react_button"
+            //   }
+            // )
           }
         } variant="solid">Hallo gais</Button>
         <a
