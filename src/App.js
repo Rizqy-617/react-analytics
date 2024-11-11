@@ -14,12 +14,13 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} id='image_logo' className="App-logo testing" alt="logo" />
+      <header className="App-header apptsjka">
+        <img src={logo} id='image_logo' className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Button id='test_react' className='test_react' onClick={
+        <a></a>
+        <Button id='test_react' className='test_react' tag-gtm="gtm_c_d_testing" onClick={
           () => {
             console.log("this happened");
             console.log(analytics.app.name);
