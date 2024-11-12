@@ -14,8 +14,8 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <header className="App-header apptsjka">
-        <img src={logo} id='image_logo' className="App-logo" alt="logo" />
+      <header className="App-header apptsjka" tag-gtm="gtm_c_d_testing2">
+        <img src={logo} id='image_logo' className="App-logo" alt="logo" tag-gtm="gtm_c_d_testing3"/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
